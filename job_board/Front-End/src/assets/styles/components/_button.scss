@@ -1,0 +1,13 @@
+// bg-blue-500 w-full hover:shadow-blue-500/20 hover:shadow-lg text-white rounded-md px-7 py-2  flex justify-center items-center
+
+.button{
+    width: 100%;
+    border-radius: $base-radius;
+    @include flex-center-center;
+    color: $text-white;
+    padding: .5rem 1.5rem;
+    background-color: $btn-bg;
+    font-family: $text-font;
+    font-weight: 500;
+
+}

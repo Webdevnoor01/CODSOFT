@@ -1,8 +1,6 @@
 
 import { useState } from 'react'
 
-import './App.css'
-
 
 import Router from './router/routes/Router';
 import publicRoute from './router/routes/publicRoutes';
@@ -13,7 +11,7 @@ function App() {
     console.log(allRoutes)
   return (
     <>
-     <Router allRoutes={[allRoutes]} />
+     <Router allRoutes={[...allRoutes]} />
 
     </>
   )

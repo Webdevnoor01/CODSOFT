@@ -1,22 +1,21 @@
 // Base
 @import "./base/base";
-@import "./base/reset";
 @import "./base/typography";
-@import "./base/normalize";
 
 // Layout
 
 
 // Abstracts
 @import "./abstracts/variables";
-@import "./abstracts/colors";
 @import "./abstracts/mixins";
 
 // Components
+@import "./components/container";
+@import "./components/button";
 
 
 // Pages
-
+@import "./pages/landingPage";
 
 // Theme
 

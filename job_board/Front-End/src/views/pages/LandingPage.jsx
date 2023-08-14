@@ -1,6 +1,7 @@
 // react-icons
 import { BiMenuAltLeft } from "react-icons/bi";
 import { AiOutlineSearch } from "react-icons/ai";
+import { CiLocationOn } from "react-icons/ci";
 
 // custome & reusable components
 import Container from "../../components/container";
@@ -72,27 +73,70 @@ const LandingPage = () => {
         </Container>
       </header>
 
-      <main>
-        <Container>
+      <main className="main">
+        <Container classes={"flex-between-center"}>
           <div className="main__content-section">
+            <div className="main__content-container">
               <h1 className="main__heading">
-                Discover more than 
-                <span className="main__heading-highlight" > 5000+ jobs </span>
+                <span>Discover&nbsp;</span>
+                <span>more than </span>
+
+                <span className="main__heading-highlight"> 5000+ jobs </span>
               </h1>
 
               <p className="main__para">
-                Great platform for the job seeker that searching for a new career heighest and passionate about startups
+                Great platform for the job seeker that searching for a new
+                career heighest and passionate about startups
               </p>
+            </div>
 
-              <div className="main__search-section">
-                <div className="main__input-container">
-                  <AiOutlineSearch />
-                  <input type="text" placeholder="Job title of keyword" />
-                </div>
-                
+            <div className="main__search-section">
+              <div className="main__input-container">
+                <AiOutlineSearch className="main__input-icon" />
+                <input
+                  className="main__input"
+                  type="text"
+                  placeholder="Job title of keyword"
+                />
               </div>
+
+              <div className="main__select-container">
+                <CiLocationOn className="main__input-icon" />
+                <select className="main__select" name="location" value="">
+                  <option value="">Choose your location</option>
+                  <option value="india">India</option>
+                  <option value="uk">United Kindomg</option>
+                </select>
+              </div>
+
+              <div className="main__button-container">
+                <Button btnTxt={"search my job"} />
+              </div>
+            </div>
+
+            <div className="main__keyword-section">
+              <Container classes={'flex-start-center-wrap gap-1'} >
+                <span className="main__keyword-heading">Popular: </span>
+                <div className="main__kaywords">
+                  <span className="main__keyword">Web Developer</span>
+                  <span className="main__keyword">Front-End developer</span>
+                  <span className="main__keyword">Android Developer</span>
+                  <span className="main__keyword">React Developer</span>
+                  <span className="main__keyword">Java Developer</span>
+                </div>
+              </Container>
+            </div>
           </div>
-          <div className="main__media-section"></div>
+
+          <div className="main__media-section">
+            <div className="main__image-container">
+              <img
+                src="../../images/landin-page/hero-img.png"
+                alt=""
+                className="main__image"
+              />
+            </div>
+          </div>
         </Container>
       </main>
       <footer>Footer</footer>

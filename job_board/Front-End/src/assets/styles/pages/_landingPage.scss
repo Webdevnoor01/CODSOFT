@@ -1,3 +1,4 @@
+// Header & Navigation styles start
 .header {
   width: 100%;
   padding: $base-padding;
@@ -100,7 +101,7 @@
 
     @include breakpoints(760px) {
       padding-bottom: 0;
-      
+
       & > a {
         font-size: 1.2rem;
         color: darken($color: $text-clr, $amount: 5);
@@ -115,7 +116,7 @@
         background: $text-highlight;
         z-index: 1;
         top: 2rem;
-        transition: all .2s linear;
+        transition: all 0.2s linear;
       }
     }
   }
@@ -134,5 +135,203 @@
   .show {
     display: block;
     top: 50px;
+  }
+}
+// Header & Navigation styles end
+
+// main section styles starts
+
+.main {
+  padding: 0.5rem;
+  background: url("../../../../images/landin-page/hero-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: auto;
+
+  @include breakpoints(426px){
+    -webkit-clip-path: polygon(
+      50% 0%,
+      100% 0,
+      100% 35%,
+      100% 78%,
+      76% 100%,
+      50% 100%,
+      0 100%,
+      0% 70%,
+      0% 35%,
+      0 0
+    );
+    clip-path: polygon(
+      50% 0%,
+      100% 0,
+      100% 35%,
+      100% 78%,
+      76% 100%,
+      50% 100%,
+      0 100%,
+      0% 70%,
+      0% 35%,
+      0 0
+    );
+    height: calc(100vh - 50px);
+  }
+  &__content-section {
+    width: 100%;
+    z-index: 5;
+
+    @include breakpoints(426px) {
+      width: 55%;
+    }
+  }
+
+  &__content-container{
+    width: 100%;
+
+    @include breakpoints(769px){
+      width: 70%;
+    }
+  }
+
+  &__heading {
+    font-size: 3rem;
+    font-family: $heading-font;
+    color: $heading-clr;
+    font-weight: 700;
+    @include flex-start-center-wrap;
+
+    // @include breakpoints(426px){
+    //   font-size: 5rem;
+    // }
+    @include breakpoints(769px){
+      font-size: 4rem;
+    }
+  }
+  &__heading-highlight {
+    color: $text-highlight;
+  }
+
+  &__para {
+    font-size: 1.1rem;
+    font-family: $text-font;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.4;
+    color: $text-clr;
+    margin: 1rem 0;
+    padding-right: 0.5rem;
+    letter-spacing: 1;
+
+    @include breakpoints(426px){
+      font-size: 1.299rem;
+    }
+  }
+
+  &__search-section {
+    padding: 0.7rem;
+    width: 100%;
+    height: auto;
+    background-color: $primary;
+    
+    box-shadow: 0 0 10px 0px darken($color: $secondary, $amount: 5);
+    border-radius: $base-radius;
+
+    @include breakpoints(426px){
+      display: flex;
+      @include flex-between-center-wrap;
+      gap: 1rem
+    }
+  }
+
+  &__input-container,
+  &__select-container {
+    @include flex-start-center;
+    gap: 1rem;
+    background-color: transparent;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    @include breakpoints(769px){
+      margin-bottom: 0;
+      width: 30%;
+    }
+  }
+  &__input,
+  &__select {
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    font-size: 0.8rem;
+    width: 80%;
+  }
+  &__input-icon {
+    font-size: 1.5rem;
+    color: $text-clr;
+  }
+
+  &__button-container {
+    width: 100%;
+    height: 3rem;
+    font-size: 1.4rem;
+
+    @include breakpoints(769px){
+      font-size: 1.2rem;
+      width: 35%;
+    }
+  }
+
+
+  &__keyword-section{
+    margin: 1rem 0;
+  }
+
+  &__keyword-heading{
+    font-size: $text-font-size;
+    color: $text-clr;
+    font-family: $text-font;
+    font-weight: 500;
+
+  }
+
+  &__kaywords{
+    @include flex-start-center-wrap;
+    width: 80%;
+    gap: .5rem;
+  }
+
+  &__keyword{
+    font-size: $text-font-size;
+    color: $text-clr;
+    font-family: $text-font;
+    font-weight: 500;
+    box-shadow: 0 0 3px darken($color: $dark-bg, $amount: 5);
+    cursor: pointer;
+    padding: .3rem .4rem;
+    border-radius: $base-radius;
+    
+
+  }
+
+
+
+
+
+  &__media-section {
+    display: none;
+    z-index: 4;
+
+    @include breakpoints(426px) {
+      display: flex;
+      width: 40%;
+     
+    }
+
+    &__image-container {
+      z-index: 4;
+      @include breakpoints(426px) {
+        width: 100%;
+        height: 50%;
+      }
+    }
   }
 }

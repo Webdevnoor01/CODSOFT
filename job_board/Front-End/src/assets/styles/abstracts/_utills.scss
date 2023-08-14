@@ -1,73 +1,73 @@
 // Mixins for display flex
 
-@mixin flex-center-center {
+.flex-center-center {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  @mixin flex-center-center-wrap {
+.flex-center-center-wrap {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
   
-  @mixin flex-between-center {
+.flex-between-center {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  @mixin flex-start-center-wrap {
+.flex-start-center-wrap {
     display: flex;
     justify-content: start;
     align-items: center;
     flex-wrap: wrap;
   }
-  @mixin flex-between-center-wrap {
+.flex-between-center-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
   }
-  @mixin flex-start-center {
+.flex-start-center {
     display: flex;
     justify-content: start;
     align-items: center;
   }
-  @mixin flex-between-start {
+.flex-between-start {
     display: flex;
     justify-content: space-between;
     align-items: start;
   }
   
-  @mixin flex-start-center {
+.flex-start-center {
     display: flex;
     justify-content: start;
     align-items: center;
   }
-  @mixin flex-start-start {
+.flex-start-start {
     display: flex;
     justify-content: start;
     align-items: start;
   }
-  @mixin flex-end-center {
+.flex-end-center {
     display: flex;
     justify-content: end;
     align-items: center;
   }
-  @mixin flex-between-center-wrap {
+.flex-between-center-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
   }
-  @mixin flex-center-end-col {
+.flex-center-end-col {
     display: flex;
     justify-content: center;
     align-items: end;
     flex-direction: column;
   }
-  @mixin flex-start-end-col {
+.flex-start-end-col {
     display: flex;
     justify-content: start;
     align-items: end;
@@ -75,9 +75,21 @@
   }
 
 
-//   Mixin for breakpoints
-@mixin breakpoints($breakpoints) {
-    @media (min-width: $breakpoints) {
-      @content;
-    }
-  }
+.gap{
+  gap: .5rem;
+}
+.gap-1{
+  gap: 1rem;
+}
+.gap-2{
+  gap: 2rem;
+}
+.gap-3{
+  gap: 3rem;
+}
+.gap-4{
+  gap: 4rem;
+}
+.gap-5{
+  gap: 5rem;
+}

@@ -1,133 +1,138 @@
-.header{
+.header {
+  width: 100%;
+  padding: $base-padding;
+  position: relative;
 
+  @include breakpoints(760px) {
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  &__nav {
     width: 100%;
-    padding: $base-padding;
+    @include flex-between-center-wrap;
+
+    @include breakpoints(760px) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__logo-section {
+    @include flex-start-center;
+    @include breakpoints(760px) {
+      width: 30%;
+    }
+  }
+
+  &__logo-container {
+    width: 40px;
+  }
+
+  &__logo-txt {
+    padding-left: 0.5rem;
+    font-family: $heading-font;
+    font-weight: 600;
+    color: $heading-clr;
+    font-size: 1.5rem;
+  }
+
+  &__hamberger-section {
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: $full-radius;
+    @include flex-center-center;
+    // border: 1px solid darken($color: $primary, $amount: 6);
+    box-shadow: 0 0 3px lighten($color: $dark-bg, $amount: 2);
+    cursor: pointer;
+    & {
+      font-size: 1.5rem;
+    }
+
+    @include breakpoints(760px) {
+      display: none;
+    }
+  }
+
+  &__menu-section {
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    background-color: $secondary;
+    z-index: 9999;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    border-top: 1px solid darken($color: $primary, $amount: 10);
+    transition: all linear 0.2s;
+
+    @include breakpoints(760px) {
+      width: 70%;
+      position: relative;
+      top: 0;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      @include flex-between-center;
+    }
+  }
+
+  &__menu-container {
+    @include breakpoints(760px) {
+      @include flex-between-center;
+      gap: 1rem;
+    }
+  }
+
+  &__menu {
+    padding-bottom: 1rem;
     position: relative;
 
-    @include breakpoints(760px){
-        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+    & > a {
+      font-size: 1rem;
+      color: $text-clr;
+      font-family: $text-font;
+      font-weight: 500;
+      transition: all linear 0.2s;
+      &:hover {
+        color: $text-highlight;
+      }
     }
 
-    &__nav{
-        width: 100%;
-        @include flex-between-center-wrap;
+    @include breakpoints(760px) {
+      padding-bottom: 0;
+      
+      & > a {
+        font-size: 1.2rem;
+        color: darken($color: $text-clr, $amount: 5);
+      }
 
-        @include breakpoints(760px){
-            flex-wrap: nowrap
-        }
-    }
-
-    &__logo-section{
-        @include flex-start-center;
-        @include breakpoints(760px){
-            width: 30%;
-        }
-
-    }
-
-    &__logo-container{
-        width: 40px;
-    }
-
-    &__logo-txt{
-        padding-left: .5rem;
-        font-family: $heading-font;
-        font-weight: 600;
-        color: $heading-clr;
-        font-size: 1.5rem;
-    }
-
-    &__hamberger-section{
-        height: 1.875rem;
-        width: 1.875rem ;
-        border-radius: $full-radius;
-        @include flex-center-center;
-        // border: 1px solid darken($color: $primary, $amount: 6);
-        box-shadow:    0 0 3px lighten($color: $dark-bg, $amount: 2);
-        cursor: pointer;
-        &{
-            font-size: 1.5rem;
-        }
-
-        @include breakpoints(760px){
-            display: none;
-        }
-    }
-
-    &__menu-section{
-        display: none;
-        width: 100%;
-        text-align: center;
-        padding: 1rem .5rem;
-        background-color: $secondary;
-        z-index: 9999;
-        position: absolute;
-        top: -50px;
-        left: 0;
-        border-top: 1px solid darken($color:  $primary, $amount: 10);
-        transition: all linear .5s;
-
-        @include breakpoints(760px){
-            width: 70%;
-            position: relative;
-            top: 0;
-            border: none;
-            background-color: transparent;
-            padding: 0;
-            @include flex-between-center
-        }
-
-    }
-
-    &__menu-container{
-        
-        @include breakpoints(760px){
-            @include flex-between-center;
-            gap: 1rem;
-        }
-    }
-
-    &__menu{
-        padding-bottom: 1rem;
-
-        
-
-         & > a{
-            font-size: 1rem;
-            color: $text-clr;
-            font-family: $text-font;
-            font-weight: 500;
-            transition: all linear .4s;
-            &:hover{
-                color: $text-highlight;
-
-            }
-         }
-         
-        @include breakpoints(760px){
-            padding-bottom: 0;
-
-            & > a{
-                font-size: 1.2rem;
-                color: darken($color: $text-clr, $amount: 5)
-            }
-        }
-    }
-
-
-    &__registration-section{
-        @include flex-between-center;
-    }
-
-    .hide {
-        display: none;
-
-        @include breakpoints(768px){
-            display: flex;
-        }
-    }
-    .show{
+      &:hover::before {
+        content: "";
         display: block;
-        top: 50px;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: $text-highlight;
+        z-index: 1;
+        top: 2rem;
+        transition: all .2s linear;
+      }
     }
+  }
+
+  &__registration-section {
+    @include flex-between-center;
+  }
+
+  .hide {
+    display: none;
+
+    @include breakpoints(768px) {
+      display: flex;
+    }
+  }
+  .show {
+    display: block;
+    top: 50px;
+  }
 }

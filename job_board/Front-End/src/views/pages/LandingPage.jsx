@@ -1,5 +1,6 @@
 // react-icons
 import { BiMenuAltLeft } from "react-icons/bi";
+import { AiOutlineSearch } from "react-icons/ai";
 
 // custome & reusable components
 import Container from "../../components/container";
@@ -70,7 +71,30 @@ const LandingPage = () => {
           </nav>
         </Container>
       </header>
-      <main>Main</main>
+
+      <main>
+        <Container>
+          <div className="main__content-section">
+              <h1 className="main__heading">
+                Discover more than 
+                <span className="main__heading-highlight" > 5000+ jobs </span>
+              </h1>
+
+              <p className="main__para">
+                Great platform for the job seeker that searching for a new career heighest and passionate about startups
+              </p>
+
+              <div className="main__search-section">
+                <div className="main__input-container">
+                  <AiOutlineSearch />
+                  <input type="text" placeholder="Job title of keyword" />
+                </div>
+                
+              </div>
+          </div>
+          <div className="main__media-section"></div>
+        </Container>
+      </main>
       <footer>Footer</footer>
     </>
   );

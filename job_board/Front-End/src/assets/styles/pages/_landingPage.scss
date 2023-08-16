@@ -142,40 +142,45 @@
 // main section styles starts
 
 .main {
-  padding: 0.5rem;
-  background: url("../../../../images/landin-page/hero-bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right;
-  height: auto;
 
-  @include breakpoints(426px){
-    -webkit-clip-path: polygon(
-      50% 0%,
-      100% 0,
-      100% 35%,
-      100% 78%,
-      76% 100%,
-      50% 100%,
-      0 100%,
-      0% 70%,
-      0% 35%,
-      0 0
-    );
-    clip-path: polygon(
-      50% 0%,
-      100% 0,
-      100% 35%,
-      100% 78%,
-      76% 100%,
-      50% 100%,
-      0 100%,
-      0% 70%,
-      0% 35%,
-      0 0
-    );
-    height: calc(100vh - 50px);
+
+  &__hero-section{
+    padding: 0.5rem;
+    background: url("../../../../images/landin-page/hero-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: auto;
+
+    @include breakpoints(426px){
+      -webkit-clip-path: polygon(
+        50% 0%,
+        100% 0,
+        100% 35%,
+        100% 78%,
+        76% 100%,
+        50% 100%,
+        0 100%,
+        0% 70%,
+        0% 35%,
+        0 0
+      );
+      clip-path: polygon(
+        50% 0%,
+        100% 0,
+        100% 35%,
+        100% 78%,
+        76% 100%,
+        50% 100%,
+        0 100%,
+        0% 70%,
+        0% 35%,
+        0 0
+      );
+      height: calc(100vh - 50px);
+    }
   }
+
   &__content-section {
     width: 100%;
     z-index: 5;
@@ -276,13 +281,18 @@
 
     @include breakpoints(769px){
       font-size: 1.2rem;
-      width: 35%;
+      width: 30%;
     }
   }
 
 
   &__keyword-section{
     margin: 1rem 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   &__keyword-heading{
@@ -334,4 +344,114 @@
       }
     }
   }
+
+
+  // explore category section styles start from here
+  &__category-section{
+    padding: .5rem;
+  }
+  &__category-heading-container{
+    margin: 1rem 0 ;
+  }
+  &__category-heading{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-family: $heading-font;
+    color: $heading-clr;
+    font-weight: 700;
+    @include flex-start-center-wrap;
+  }
+  &__category-heading-highlight{
+    color: $text-highlight;
+  }
+
+  &__category-container{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    gap: 1rem;
+
+    @include breakpoints(426px){
+      grid-template-columns: repeat( auto-fit, minmax(214px, 214px) );
+    }
+  }
+//   &__category-card{
+//     padding: 1rem ;
+//     @include flex-between-center;
+//     gap: 1rem;
+//     border-radius: $base-radius;
+//     box-shadow: 0px 0px 5px darken($color: $secondary, $amount: 8);
+//     transition: all .3s linear;
+//     cursor: pointer;
+//     color: $text-clr;
+//     &:hover{
+//       background-color: $btn-bg;
+//       color: $text-white;
+
+//       & * {
+//         color: $text-white;
+//       }
+//     }
+
+//     @include breakpoints(426px){
+//       display: block;
+//     }
+//   }
+
+//   &__category-card-right{
+//     @include flex-between-center;
+
+//     @include breakpoints(426px){
+//       margin-top: 1.5rem;
+//     }
+//   }
+
+//   &__category-card-left-icon-container{
+//     @include breakpoints(426px){
+//       width: 100%;
+//       @include flex-start-start;
+//     }
+//   }
+//   &__category-card-left-icon{
+//     font-size: 2.5rem;
+//     color: darken($color: $btn-bg, $amount: 8);
+
+
+//     @include breakpoints(426px){
+//       font-size: 1.8rem;
+//       text-align: left;
+//     }
+//   }
+//   &__category-card-title{
+//     line-height: 1.4;
+
+//     @include breakpoints(426px){
+//       width: 50%;
+
+//     }
+//     & > h3{
+//       font-size: 1.6rem;
+//       color: $heading-clr;
+//       font-family: $heading-font;
+//       font-weight: 600;
+
+//     }
+//     & > p{
+//       font-size:  0.8125rem;
+//       font-family: $text-font;
+//       font-weight: 500;
+//       text-align: left;
+//       color: $text-clr;
+//     }
+//   }
+//  &__category-card-right-icon-container{
+//   height: 100%;
+//   @include flex-end-end
+//  }
+//  &__category-card-right-icon{
+//   font-size: 2rem;
+//   color: darken($color: $text-clr, $amount: 5);
+//  }
+
+ 
+
 }

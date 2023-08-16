@@ -5,6 +5,11 @@
     justify-content: center;
     align-items: center;
   }
+@mixin flex-center-end {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
   @mixin flex-center-center-wrap {
     display: flex;
     justify-content: center;
@@ -16,6 +21,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  @mixin flex-between-end {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
   }
   @mixin flex-start-center-wrap {
     display: flex;
@@ -54,6 +64,11 @@
     display: flex;
     justify-content: end;
     align-items: center;
+  }
+  @mixin flex-end-end {
+    display: flex;
+    justify-content: end;
+    align-items: end;
   }
   @mixin flex-between-center-wrap {
     display: flex;

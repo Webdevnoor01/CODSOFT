@@ -5,17 +5,38 @@
     justify-content: center;
     align-items: center;
   }
-@mixin flex-center-end {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-  }
   @mixin flex-center-center-wrap {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
+@mixin flex-center-end {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+  
+@mixin flex-center-end-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-wrap: wrap;
+  }
+@mixin flex-center-start{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  
+}
+  
+@mixin flex-center-start-col{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+
+}
   
   @mixin flex-between-center {
     display: flex;

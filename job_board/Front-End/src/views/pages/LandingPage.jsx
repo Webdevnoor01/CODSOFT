@@ -1,5 +1,5 @@
 // react-icons
-import { BiMenuAltLeft } from "react-icons/bi";
+import { BiMenuAltLeft, BiRightArrowAlt } from "react-icons/bi";
 import { AiOutlineSearch } from "react-icons/ai";
 import { CiLocationOn, CiBullhorn } from "react-icons/ci";
 import { MdOutlineDesignServices, MdBusinessCenter } from "react-icons/md";
@@ -13,6 +13,7 @@ import Container from "../../components/container";
 import { useState } from "react";
 import Button from "../../components/ui/button";
 import Card from "../../components/landing-page/card";
+import JobCard from "../../components/landing-page/job-card";
 
 const LandingPage = () => {
   const [toggleVisibility, setToggleVisibility] = useState("hide");
@@ -147,6 +148,7 @@ const LandingPage = () => {
 
         <section className="main__category-section">
           <Container>
+
             <div className="main__category-heading-container">
               <h2 className="main__category-heading">
                 Explore by{" "}
@@ -155,52 +157,120 @@ const LandingPage = () => {
                 </span>
               </h2>
 
-              <div className="main__category-container">
-                <Card
-                  Icon={MdOutlineDesignServices}
-                  title={"Designs"}
-                  jobs={300}
-                />
-                <Card
-                  Icon={MdOutlineDesignServices}
-                  title={"Designs"}
-                  jobs={300}
-                />
-                <Card
-                  Icon={MdOutlineDesignServices}
-                  title={"Designs"}
-                  jobs={300}
-                />
-                <Card
-                  Icon={MdOutlineDesignServices}
-                  title={"Designs"}
-                  jobs={300}
-                />
-                <Card
-                  Icon={MdOutlineDesignServices}
-                  title={"Designs"}
-                  jobs={300}
-                />
-                <Card
-                  Icon={MdOutlineDesignServices}
-                  title={"Designs"}
-                  jobs={300}
-                />
-                <Card
-                  Icon={MdOutlineDesignServices}
-                  title={"Designs"}
-                  jobs={300}
-                />
-                <Card
-                  Icon={MdOutlineDesignServices}
-                  title={"Designs"}
-                  jobs={300}
-                />
-                
-              </div>
+              <p className="main__category-heading-button">
+                <span className="main__category-heading-button-text">
+                  Show all category
+                </span>
+                <BiRightArrowAlt className="main__category-heading-button-icon" />
+              </p>
+            </div>
+            <div className="main__category-container">
+
+              <Card
+                Icon={MdOutlineDesignServices}
+                title={"Designs"}
+                jobs={300}
+              />
+              <Card
+                Icon={FcSalesPerformance}
+                title={"Sales"}
+                jobs={200}
+              />
+              <Card
+                Icon={CiBullhorn}
+                title={"Marketing"}
+                jobs={400}
+              />
+              <Card
+                Icon={FaMoneyBillTrendUp}
+                title={"Finance"}
+                jobs={100}
+              />
+              <Card
+                Icon={HiOutlineDesktopComputer}
+                title={"Technology"}
+                jobs={400}
+              />
+              <Card
+                Icon={BsCode}
+                title={"Engineering"}
+                jobs={1000}
+              />
+              <Card
+                Icon={MdBusinessCenter}
+                title={"Business"}
+                jobs={200}
+              />
+              <Card
+                Icon={FaPeopleLine}
+                title={"Human Resources"}
+                jobs={200}
+              />
             </div>
           </Container>
         </section>
+
+
+
+        <section className="main__job-section">
+          <Container>
+
+            <div className="main__job-heading-container">
+              <h2 className="main__job-heading">
+                Featured
+                <span className="main__job-heading-highlight">
+                  &nbsp;jobs
+                </span>
+              </h2>
+
+              <p className="main__job-heading-button">
+                <span className="main__job-heading-button-text">
+                  Show all jobs
+                </span>
+                <BiRightArrowAlt className="main__job-heading-button-icon" />
+              </p>
+            </div>
+            <div className="main__job-container">
+              <JobCard
+                logo={"https://static.wixstatic.com/media/4a8176_6b644eece35c4e7588411663df2b1560~mv2.png/v1/fill/w_1000%2Ch_1000%2Cal_c%2Cq_90/file.jpg"}
+                jobType={"Full Time"}
+                companyName={"Google"}
+                location={"Sanfrasisco, US"}
+                title={"Software engineer"}
+                categories={["Business", "Marketing"]}
+                shortDescription={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid enim temporibus ut sed at sint eos excepturi fugit? Laudantium maiores pariatur iste eveniet, molestiae ipsum enim nobis sunt quis provident?"}
+              />
+              <JobCard
+                logo={"https://static.wixstatic.com/media/4a8176_6b644eece35c4e7588411663df2b1560~mv2.png/v1/fill/w_1000%2Ch_1000%2Cal_c%2Cq_90/file.jpg"}
+                jobType={"Full Time"}
+                companyName={"Google"}
+                location={"Sanfrasisco, US"}
+                title={"Software engineer"}
+                categories={["Business", "Marketing"]}
+                shortDescription={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid enim temporibus ut sed at sint eos excepturi fugit? Laudantium maiores pariatur iste eveniet, molestiae ipsum enim nobis sunt quis provident?"}
+              />
+              <JobCard
+                logo={"https://static.wixstatic.com/media/4a8176_6b644eece35c4e7588411663df2b1560~mv2.png/v1/fill/w_1000%2Ch_1000%2Cal_c%2Cq_90/file.jpg"}
+                jobType={"Full Time"}
+                companyName={"Google"}
+                location={"Sanfrasisco, US"}
+                title={"Software engineer"}
+                categories={["Business", "Marketing"]}
+                shortDescription={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid enim temporibus ut sed at sint eos excepturi fugit? Laudantium maiores pariatur iste eveniet, molestiae ipsum enim nobis sunt quis provident?"}
+              />
+              <JobCard
+                logo={"https://static.wixstatic.com/media/4a8176_6b644eece35c4e7588411663df2b1560~mv2.png/v1/fill/w_1000%2Ch_1000%2Cal_c%2Cq_90/file.jpg"}
+                jobType={"Full Time"}
+                companyName={"Google"}
+                location={"Sanfrasisco, US"}
+                title={"Software engineer"}
+                categories={["Business", "Marketing"]}
+                shortDescription={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid enim temporibus ut sed at sint eos excepturi fugit? Laudantium maiores pariatur iste eveniet, molestiae ipsum enim nobis sunt quis provident?"}
+              />
+            </div>
+          </Container>
+        </section>
+
       </main>
       <footer>Footer</footer>
     </>

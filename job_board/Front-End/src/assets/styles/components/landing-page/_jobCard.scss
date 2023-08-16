@@ -1,0 +1,136 @@
+.main {
+  &__job-card {
+    padding: 1rem;
+    @include flex-center-start-col;
+    gap: 1rem;
+    border-radius: $base-radius;
+    box-shadow: 0px 0px 5px darken($color: $secondary, $amount: 8);
+    transition: all 0.3s linear;
+    cursor: pointer;
+    color: $text-clr;
+    //   &:hover {
+    //     background-color: $btn-bg;
+    //     color: $text-white;
+
+    //     & * {
+    //       color: $text-white;
+    //       &  >{
+    //         color: $text-white;
+    //       }
+    //     }
+    //   }
+
+    @include breakpoints(426px) {
+      display: block;
+    }
+    @include breakpoints(1444px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      
+      width: 300px;
+    }
+  }
+
+  &__job-card-heading{
+    @include flex-between-center;
+    gap: 1rem;
+    width: 100%;
+    margin: 0rem  0  1rem 0;
+
+  }
+
+  &__job-card-logo-container{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: transparent;
+
+  }
+  &__job-card-logo{
+    border-radius: 100%;
+  }
+
+  &__job-card-button{
+    outline: none;
+    border: 1px solid darken($color: $text-highlight, $amount: 8);
+    background-color: transparent;
+    padding:.5rem 1.5rem ;
+    border-color: $text-highlight;
+    color: darken($color: $text-highlight, $amount: 5);
+    font-family: $text-font;
+    font-weight: 500;
+    font-size: $text-font-size;
+  }
+
+  &__job-card-title{
+    font-size: 1.5rem;
+    font-family: $heading-font;
+    font-weight: 600;
+    color: $heading-clr;
+
+  }
+  &__job-card-company{
+    @include flex-between-center;
+    position: relative;
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-family: $text-font;
+    margin: 1rem 0;
+
+  }
+  &__job-card-company-name{
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 7px;
+        width: 7px;
+        border-radius: 100%;
+        background-color: rgba(128, 128, 128, 0.642);
+        top: .4rem;
+        left: 4.5rem;
+        z-index: 5;
+    }
+  }
+
+  &__job-card-description{
+    font-size: .95rem;
+    line-height: 1.5;
+    font-family: $text-font;
+    font-weight: 400;
+    color: darken($color: $text-clr, $amount: 7);
+  }
+  
+  &__job-card-keywords{
+    margin: 1rem 0;
+    width: 100%;
+    @include flex-between-center;
+    gap: 1rem;
+  }
+
+  &__job-card-keyword{
+    padding: .4rem .8rem;
+    border-radius: $base-radius;
+    font-family: $text-font;
+    font-weight: 500;
+    font-size: $text-font-size;
+  }
+
+
+  .business{
+    background-color: rgba(0, 128, 0, 0.345);
+    color: #0e9d0e;
+  }
+  .marketing{
+    background-color: rgba(255, 166, 0, 0.345);
+    color: rgb(144, 98, 12);
+  }
+  .engineering{
+
+  }
+  .technology{
+
+  }
+}

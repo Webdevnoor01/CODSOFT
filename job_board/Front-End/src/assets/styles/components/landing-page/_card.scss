@@ -8,6 +8,7 @@
     transition: all 0.3s linear;
     cursor: pointer;
     color: $text-clr;
+    background-color: $primary;
     &:hover {
       background-color: $btn-bg;
       color: $text-white;
@@ -20,6 +21,14 @@
     @include breakpoints(426px) {
       display: block;
     }
+    @include breakpoints(1444px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      height: 250px;
+      width: 300px
+    }
   }
 
   &__category-card-right {
@@ -27,6 +36,7 @@
 
     @include breakpoints(426px) {
       margin-top: 1.5rem;
+      width: 100%;
     }
   }
 
@@ -44,6 +54,10 @@
       font-size: 1.8rem;
       text-align: left;
     }
+    @include breakpoints(1444px) {
+      font-size: 2.8rem;
+      text-align: left;
+    }
   }
   &__category-card-title {
     line-height: 1.4;
@@ -56,6 +70,10 @@
       color: $heading-clr;
       font-family: $heading-font;
       font-weight: 600;
+
+      @include breakpoints(1444px) {
+        font-size: 2rem;
+      }
     }
     & > p {
       font-size: 0.8125rem;

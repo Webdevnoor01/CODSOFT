@@ -267,6 +267,7 @@ const LandingPage = () => {
                 categories={["Business", "Marketing"]}
                 shortDescription={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid enim temporibus ut sed at sint eos excepturi fugit? Laudantium maiores pariatur iste eveniet, molestiae ipsum enim nobis sunt quis provident?"}
               />
+    
             </div>
           </Container>
         </section>
